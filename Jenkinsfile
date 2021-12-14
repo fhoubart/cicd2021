@@ -25,7 +25,7 @@ pipeline {
         stage('Package') {
             steps {
                 // Run Maven on a Unix agent.
-                bat "mvn -Dmaven.test.failure.ignore=true test"
+                bat "mvn -Dmaven.test.failure.ignore=true package"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true package"
