@@ -31,8 +31,8 @@ pipeline {
                 // bat "mvn -Dmaven.test.failure.ignore=true package"
             }
         }
-        
-        post {
+    }
+     post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
@@ -40,5 +40,4 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
             }
-    }
 }
